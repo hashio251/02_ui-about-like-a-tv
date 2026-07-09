@@ -16,8 +16,8 @@ const images = [
   'https://hashio251.github.io/assets/images/gallery/flower&butterfly.jpg',
   'https://hashio251.github.io/assets/images/gallery/aoi-cafe.jpg',
   'https://hashio251.github.io/assets/images/front/ai/gallery7.png',
-  'https://hashio251.github.io/assets/images/production/production1.png',
-  'https://hashio251.github.io/assets/images/production/production2.png'
+  'https://hashio251.github.io/assets/images/production/portfolio.png',
+  'https://hashio251.github.io/assets/images/production/z-axis.png'
 ];
 
 
