@@ -18,21 +18,72 @@ const channelButtons = document.querySelectorAll(".button");
 
 
 // ======================
-// Images
+// Channnels
 // ======================
+let date = getTime
 const DEFAULT_IMAGE =
-  "https://t3.ftcdn.net/jpg/02/67/34/78/240_F_267347838_Gf5fpCpVPqvTRuy9XftJHWEUmFbAKQLQ.jpg";
+{
+  title: "WELCOME",
+  image: "",
+  url:"",
+  description: ""
+};
 
-const images = [
-  "https://hashio251.github.io/assets/images/gallery/flower.jpg",
-  "https://hashio251.github.io/assets/images/gallery/fisshing&beer.jpg",
-  "https://hashio251.github.io/assets/images/gallery/model.jpg",
-  "https://hashio251.github.io/assets/images/gallery/aoi-coffe.jpg",
-  "https://hashio251.github.io/assets/images/gallery/flower&butterfly.jpg",
-  "https://hashio251.github.io/assets/images/gallery/aoi-cafe.jpg",
-  "https://hashio251.github.io/assets/images/front/ai/gallery7.png",
-  "https://hashio251.github.io/assets/images/production/portfolio.png",
-  "https://hashio251.github.io/assets/images/production/z-axis.png",
+const channnels = [
+  {
+    title: "",
+    image: "",
+    url:"",
+    description: ""
+  },
+  {
+    title: "",
+    image: "",
+    url:"",
+    description: ""
+  },
+  {
+    title: "",
+    image: "",
+    url:"",
+    description: ""
+  },
+  {
+    title: "",
+    image: "",
+    url:"",
+    description: ""
+  },
+  {
+    title: "",
+    image: "",
+    url:"",
+    description: ""
+  },
+  {
+    title: "",
+    image: "",
+    url:"",
+    description: ""
+  },
+  {
+    title: "",
+    image: "",
+    url:"",
+    description: ""
+  },
+  {
+    title: "",
+    image: "",
+    url:"",
+    description: ""
+  },
+  {
+    title: "",
+    image: "",
+    url:"",
+    description: ""
+  }
 ];
 
 
