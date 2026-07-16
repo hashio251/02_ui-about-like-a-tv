@@ -2,7 +2,7 @@
 // State
 // ======================
 let isPowerOn = false;
-
+let clockInterval = null;
 
 
 // ======================
@@ -20,7 +20,6 @@ const channelButtons = document.querySelectorAll(".button");
 // ======================
 // Channnels
 // ======================
-const now = Date.now();
 const firstViewImage =   "assets/images/loading_1.jpg";
 
 const loadingImages = [
@@ -99,10 +98,9 @@ const channels = [
     description: "ch8"
   },
   {
-    title: "ch9",
-    image: now,
-    url:"",
-    description: "ch9"
+    title: "ch9 about clock",
+    type: "clock",
+    description: "ch9 about clock"
   }
 ];
 
@@ -122,8 +120,16 @@ const WELCOME_TIME = 1000;
 // Functions
 // ======================
 function changeScreen(imageUrl) {
+
+  if (clockInterval) {
+    clearInterval(clockInterval);
+    clockInterval = null;
+  }
+
+  tvScreen.textContent = "";
   tvScreen.style.backgroundImage = `url(${imageUrl})`;
 }
+
 
 function updatePowerButtonStyle() {
   if (isPowerOn) {
@@ -173,6 +179,23 @@ function turnOffTV() {
   updatePowerButtonStyle();
 }
 
+function showClock() {
+
+  tvScreen.style.backgroundImage = "none";
+
+  function updateClock() {
+    const now = new Date();
+    tvScreen.textContent = now.toLocaleTimeString("ja-JP");
+  }
+
+  updateClock();
+
+  if (clockInterval) {
+    clearInterval(clockInterval);
+  }
+
+  clockInterval = setInterval(updateClock, 1000);
+}
 
 
 // ======================
@@ -188,6 +211,12 @@ channelButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
     if (!isPowerOn) return;
 
-    changeScreen(channels[index].image);
+const channel = channels[index];
+
+if (channel.type === "clock") {
+  showClock();
+} else {
+  changeScreen(channel.image);
+}
   });
 });
