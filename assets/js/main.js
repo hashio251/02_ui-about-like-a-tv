@@ -21,65 +21,76 @@ const channelButtons = document.querySelectorAll(".button");
 // Channnels
 // ======================
 let date = getTime
-const DEFAULT_IMAGE =
-{
-  title: "WELCOME",
-  image: "",
-  url:"",
-  description: ""
-};
+
+const loadingImages = [
+  "assets/images/loading_1.jpg",
+  "assets/images/loading_cage0.jpg",
+  "assets/images/loading_cage1.jpg",
+  "assets/images/loading_cage2.jpg",
+  "assets/images/loading_cage3.jpg",
+  "assets/images/loading_cage4.jpg",
+  "assets/images/loading_cage5.jpg",
+  "assets/images/loading_cage6.jpg",
+  "assets/images/loading_cage7.jpg",
+  "assets/images/loading_cage8.jpg",
+  "assets/images/loading_cage9.jpg",
+  "assets/images/loading_cage10.jpg",
+  "assets/images/loading_success.jpg"
+];
+
+const WELCOME_IMAGE = "assets/images/welcome.jpg";
 
 const channnels = [
   {
-    title: "",
+    title: "ch1 about portfolio",
     image: "",
     url:"",
     description: ""
   },
   {
-    title: "",
+    title: "ch2 about website",
     image: "",
     url:"",
     description: ""
   },
   {
-    title: "",
+    title: "ch3 about figma",
     image: "",
     url:"",
     description: ""
   },
   {
-    title: "",
+    title: "ch4 about ps",
     image: "",
     url:"",
     description: ""
   },
   {
-    title: "",
+    title: "ch5 about ai",
     image: "",
     url:"",
     description: ""
   },
   {
-    title: "",
+    title: "ch6 about ummmmmm",
     image: "",
     url:"",
     description: ""
   },
   {
-    title: "",
+    title: "ch7",
     image: "",
     url:"",
     description: ""
   },
   {
-    title: "",
+    title: "ch8",
     image: "",
     url:"",
     description: ""
   },
   {
-    title: "",
+    title: "ch9",
     image: "",
     url:"",
     description: ""
@@ -114,7 +125,7 @@ function updatePowerButtonStyle() {
 function turnOnTV() {
   isPowerOn = true;
 
-  changeScreen(DEFAULT_IMAGE);
+  changeScreen(WELCOME_IMAGE);
 
   updatePowerButtonStyle();
 }
