@@ -3,6 +3,7 @@
 // ======================
 let isPowerOn = false;
 let clockInterval = null;
+let currentChannel = null;
 
 
 // ======================
@@ -213,10 +214,20 @@ channelButtons.forEach((button, index) => {
 
 const channel = channels[index];
 
+currentChannel = channel;
+
 if (channel.type === "clock") {
   showClock();
 } else {
   changeScreen(channel.image);
 }
   });
+});
+
+tvScreen.addEventListener("click", () => {
+  if (!currentChannel) return;
+
+  if (!currentChannel.url) return;
+
+  window.open(currentChannel.url, "_blank");
 });
