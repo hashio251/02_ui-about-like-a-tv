@@ -20,7 +20,7 @@ const channelButtons = document.querySelectorAll(".button");
 // ======================
 // Channnels
 // ======================
-const now = Date().now;
+// const now = Date().now;
 
 const loadingImages = [
   "assets/images/loading_1.jpg",
@@ -87,13 +87,13 @@ const channels = [
     title: "ch8",
     image: "https://as1.ftcdn.net/jpg/04/90/51/96/1000_F_490519649_qsokgPPBzCpGoSKAykf3gLmMuLev21rm.webp",
     url:"",
-    description: ""
+    description: "ch8"
   },
   {
     title: "ch9",
     image: "https://as1.ftcdn.net/jpg/04/90/51/96/1000_F_490519644_XG7iCZ1U51ozAHBUXpkrWnargCalGrzT.webp",
     url:"",
-    description: ""
+    description: "ch9"
   }
 ];
 
@@ -130,6 +130,14 @@ function turnOnTV() {
   updatePowerButtonStyle();
 }
 
+function loadingTV() {
+  changeScreen(loadingImages[0]);
+
+  setTimeout(() => {
+    changeScreen(loadingImages[1]);
+  },300);
+};
+
 function turnOffTV() {
   isPowerOn = false;
 
@@ -147,10 +155,12 @@ powerOnButton.addEventListener("click", turnOnTV);
 
 powerOffButton.addEventListener("click", turnOffTV);
 
+powerOnButton.addEventListener("click", loadingTV);
+
 channelButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
     if (!isPowerOn) return;
 
-    changeScreen(images[index]);
+    changeScreen(channels[index].image);
   });
 });
