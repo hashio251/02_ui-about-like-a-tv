@@ -92,9 +92,9 @@ const channels = [
     description: "ch7 about openprocessing"
   },
   {
-    title: "ch8",
+    title: "ch8 about git hub",
     image: "https://as1.ftcdn.net/jpg/04/90/51/96/1000_F_490519649_qsokgPPBzCpGoSKAykf3gLmMuLev21rm.webp",
-    url:"",
+    url:"https://github.com/hashio251",
     description: "ch8"
   },
   {
