@@ -2,6 +2,8 @@
 
 An interactive portfolio inspired by a retro television.
 
+No AI is used.
+
 Instead of navigating through ordinary menus, users turn on the TV, switch channels, and explore different parts of my portfolio just like watching television.
 
 Each channel displays a custom-designed thumbnail and provides quick access to my portfolio, GitHub, Figma, OpenProcessing, and other creative works.
